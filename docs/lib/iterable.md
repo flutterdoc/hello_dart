@@ -1,10 +1,10 @@
 # Iterable collections
 
 
-
 ##  What are collections?
 
-A collection is **an object that represents a group of objects**, which are called *elements*. Iterables are a kind of collection.
+> A collection is **an object that represents a group of objects**, which are called *elements*. Iterables are a kind of collection.
+>
 
 A collection can be empty, or it can contain many elements. Depending on the purpose, collections can have different structures and implementations. These are some of the most common collection types:
 
@@ -16,7 +16,8 @@ A collection can be empty, or it can contain many elements. Depending on the pur
 
 An `Iterable` is a collection of elements that can be accessed sequentially.
 
-In Dart, an `Iterable` is an abstract class, meaning that you can’t instantiate it directly. However, you can create a new `Iterable` by creating a new `List` or `Set`.
+> In Dart, an `Iterable` is an abstract class, meaning that you can’t instantiate it directly. However, you can create a new `Iterable` by creating a new `List` or `Set`.
+>
 
 - Both `List` and `Set` are `Iterable`, so they have the same methods and properties as the `Iterable` class.
 - Elements of a `Map` can also be read as `Iterable` objects by using the map’s `entries` or `values` property.
@@ -87,8 +88,6 @@ In some cases, you want to access only the first or the last element of an `Iter
 With the `Iterable` class, you can’t access the elements directly, so you can’t call `iterable[0]` to access the first element. Instead, you can use `first`, which gets the first element.
 
 Also, with the `Iterable` class, you can’t use the operator `[]` to access the last element, but you can use the `last` property.
-
-
 
 > Because accessing the last element of an Iterable requires stepping through all the other elements, **`last` can be slow.** Using `first` or `last` on an **empty `Iterable`** results in a [StateError.](https://api.dart.dev/stable/dart-core/StateError-class.html)
 
@@ -165,10 +164,6 @@ In the example, `firstWhereWithOrElse()` calls `firstWhere()` with the optional 
 
 >  If no element satisfies the test predicate and the `orElse` parameter isn’t provided, then `firstWhere()` throws a [StateError](https://api.dart.dev/stable/dart-core/StateError-class.html)
 
-
-
-
-
 **Quick review:**
 
 - The elements of an `Iterable` must be accessed sequentially.
@@ -238,10 +233,6 @@ void main() {
   }
 }
 ```
-
-
-
-<iframe src="https://dartpad.dev/embed-dart.html?theme=light&amp;run=dartpad&amp;split=false&amp;ga_id=using_any_and_every" style="box-sizing: border-box; border: 1px solid rgb(62, 68, 70); margin-bottom: 1rem; min-height: 220px; resize: vertical; width: 668.8px; height: 255px;"></iframe>
 
 In the example, `any()` verifies that at least one element contains the character `a`, and `every()` verifies that all elements have a length equal to or greater than 5.
 

@@ -6,6 +6,7 @@
 - [Markdown](markdown)
 - [Changelog](changelog)
 - [Iterable](iterable)
+- [String](string)
 
 
 - **Links**
